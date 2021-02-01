@@ -31,3 +31,17 @@ from torchvision.datasets import ImageFolder
 from torch.utils.data import DataLoader
 from torchvision import models
 from torch import nn, optim
+
+#图像格式声明
+%matplotlib inline
+%config InlineBackend.figure_format='retina'
+sns.set(style='whitegrid', palette='muted', font_scale=1.2)
+HAPPY_COLORS_PALETTE = ["#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#93D30C", "#8F00FF"]
+sns.set_palette(sns.color_palette(HAPPY_COLORS_PALETTE))
+rcParams['figure.figsize'] = 12, 8
+RANDOM_SEED = 666
+np.random.seed(RANDOM_SEED)
+torch.manual_seed(RANDOM_SEED)
+
+device = torch.device("cuda" if torch.cuda.is_available() else torch.device("cpu"))
+
