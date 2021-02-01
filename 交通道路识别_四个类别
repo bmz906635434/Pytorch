@@ -1,0 +1,33 @@
+#Please run this file in jupyter notebook
+
+#加载必要的库
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import cv2
+import seaborn as sns
+import shutil
+import os
+import torch
+import torchvision
+import torchvision.transforms as transforms
+import torch.nn.functional as F
+
+
+from tqdm import tqdm
+from pylab import rcParams
+from matplotlib import rc
+from matplotlib.ticker import MaxNLocator
+from pathlib import Path
+from glob import glob
+from PIL import Image
+from collections import defaultdict
+
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import confusion_matrix, classification_report
+
+from torch.optim import lr_scheduler
+from torchvision.datasets import ImageFolder
+from torch.utils.data import DataLoader
+from torchvision import models
+from torch import nn, optim
